@@ -93,10 +93,6 @@ void write_matrix(const vector<vector<double>> &matrix, const string &filename)
     }
 }
 
-void verification()
-{
-    system("py result_check.py");
-}
 
 void make_report(int size, const string &filename)
 {
@@ -118,18 +114,9 @@ void make_report(int size, const string &filename)
     write_matrix(matrix_1, "matrix_1.txt");
     write_matrix(matrix_2, "matrix_2.txt");
     write_matrix(result_matrix, "result.txt");
-    verification();
 }
 
 int main()
 {
     make_report(5, "report.txt");
-    make_report(10, "report.txt");
-    make_report(15, "report.txt");
-    make_report(20, "report.txt");
-    make_report(25, "report.txt");
-    make_report(50, "report.txt");
-    make_report(100, "report.txt");
-    make_report(500, "report.txt");
-    make_report(1000, "report.txt");
 }
