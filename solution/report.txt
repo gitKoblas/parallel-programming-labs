@@ -1,6 +1,3 @@
-# parallel-programming-labs
-2 лабораторная работа по параллельному программированию ИБАС 4 семестр
-
 Cores     Threads     Matrix Size    Time (microseconds)
 1         1           200            2512
 1         1           400            21230
