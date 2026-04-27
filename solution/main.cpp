@@ -132,4 +132,7 @@ int main()
     make_report(100, "report.txt");
     make_report(500, "report.txt");
     make_report(1000, "report.txt");
+    make_report(1200, "report.txt");
+    make_report(1600, "report.txt");
+    make_report(2000, "report.txt");
 }

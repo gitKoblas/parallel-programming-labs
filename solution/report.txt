@@ -1,51 +1,60 @@
 Matrix size: 5
-C++ Execution time: 4 microseconds
-NumPy Execution time: 21.90 microseconds
+C++ Execution time: 3 microseconds
+NumPy Execution time: 29.80 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 10
-C++ Execution time: 23 microseconds
-NumPy Execution time: 21.70 microseconds
+C++ Execution time: 29 microseconds
+NumPy Execution time: 21.30 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 15
-C++ Execution time: 104 microseconds
-NumPy Execution time: 31.60 microseconds
+C++ Execution time: 59 microseconds
+NumPy Execution time: 19.50 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 20
-C++ Execution time: 175 microseconds
-NumPy Execution time: 24.90 microseconds
+C++ Execution time: 137 microseconds
+NumPy Execution time: 1719.00 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 25
-C++ Execution time: 337 microseconds
-NumPy Execution time: 27.30 microseconds
+C++ Execution time: 264 microseconds
+NumPy Execution time: 31.30 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 50
-C++ Execution time: 2667 microseconds
-NumPy Execution time: 35.70 microseconds
+C++ Execution time: 2069 microseconds
+NumPy Execution time: 31.70 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 100
-C++ Execution time: 21616 microseconds
-NumPy Execution time: 69.10 microseconds
+C++ Execution time: 16396 microseconds
+NumPy Execution time: 58.60 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 500
-C++ Execution time: 2505070 microseconds
-NumPy Execution time: 1733.50 microseconds
+C++ Execution time: 2132484 microseconds
+NumPy Execution time: 3911.90 microseconds
 Verification: True
 -----------------------------------
 Matrix size: 1000
-C++ Execution time: 19780743 microseconds
-NumPy Execution time: 12234.70 microseconds
+C++ Execution time: 22818070 microseconds
+NumPy Execution time: 8623.20 microseconds
 Verification: True
 -----------------------------------
-
-
-Вывод:
-Код, написанный на C++, работает быстрее NumPy на матрицах малых размеров.
-В районе матриц, размером 10*10, библиотека NumPy начинает сильно выигрывать во времени.
-Результаты, полученные на C++, совпадают с результатами из NumPy.
+Matrix size: 1200
+C++ Execution time: 38660796 microseconds
+NumPy Execution time: 27644.10 microseconds
+Verification: True
+-----------------------------------
+Matrix size: 1600
+C++ Execution time: 83354436 microseconds
+NumPy Execution time: 35581.10 microseconds
+Verification: True
+-----------------------------------
+Matrix size: 2000
+C++ Execution time: 174835816 microseconds
+NumPy Execution time: 59155.00 microseconds
+Verification: True
+-----------------------------------
