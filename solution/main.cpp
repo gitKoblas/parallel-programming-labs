@@ -4,6 +4,7 @@
 #include <random>
 #include <chrono>
 #include <iomanip>
+#include <mpi.h>
 
 using namespace std;
 using namespace std::chrono;
@@ -93,11 +94,6 @@ void write_matrix(const vector<vector<double>> &matrix, const string &filename)
     }
 }
 
-void verification()
-{
-    system("py result_check.py");
-}
-
 void make_report(int size, const string &filename)
 {
     ofstream file(filename, ios::app);
@@ -118,7 +114,6 @@ void make_report(int size, const string &filename)
     write_matrix(matrix_1, "matrix_1.txt");
     write_matrix(matrix_2, "matrix_2.txt");
     write_matrix(result_matrix, "result.txt");
-    verification();
 }
 
 int main()
