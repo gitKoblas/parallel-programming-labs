@@ -1,3 +1,9 @@
+# Анализ производительности: Время выполнения vs Размер матрицы
+
+!(graph.png)
+
+## Данные измерений
+
 cores = 1
 Matrix size = 200
 Execution time(microseconds): 0.00628989
@@ -53,3 +59,10 @@ Matrix size = 1600
 Execution time(microseconds): 1.29034
 Matrix size = 2000
 Execution time(microseconds): 2.53123
+
+## Вывод
+
+Параметры компиляции  mpic++ -O3 -o matmul main.cpp
+Параметры запуска  mprirun -n (cores) ./matmul
+При увеличивании количества ядер скорость выполнения программы существенно возрастает
+Наибольшая разница наблюдается на матрицах больших размеров
