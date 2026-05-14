@@ -2,69 +2,27 @@
 Лабораторные по параллельному программированию ИБАС 4 семестр
 # Анализ производительности: Время выполнения vs Размер матрицы
 
-![График](graph.png)
+<img src="graph.png">
 
-## Данные измерений
+## Данные измерений(microseconds)
 
-cores = 1
-Matrix size = 200
-Execution time(microseconds): 0.00628989
-Matrix size = 400
-Execution time(microseconds): 0.042888
-Matrix size = 800
-Execution time(microseconds): 0.431797
-Matrix size = 1200
-Execution time(microseconds): 1.62047
-Matrix size = 1600
-Execution time(microseconds): 4.22878
-Matrix size = 2000
-Execution time(microseconds): 8.69283
-
-cores = 2
-Matrix size = 200
-Execution time(microseconds): 0.00245141
-Matrix size = 400
-Execution time(microseconds): 0.0204311
-Matrix size = 800
-Execution time(microseconds): 0.228098
-Matrix size = 1200
-Execution time(microseconds): 0.985725
-Matrix size = 1600
-Execution time(microseconds): 2.5136
-Matrix size = 2000
-Execution time(microseconds): 5.39058
-
-cores = 4
-Matrix size = 200
-Execution time(microseconds): 0.00194994
-Matrix size = 400
-Execution time(microseconds): 0.0133579
-Matrix size = 800
-Execution time(microseconds): 0.139995
-Matrix size = 1200
-Execution time(microseconds): 0.765597
-Matrix size = 1600
-Execution time(microseconds): 1.48156
-Matrix size = 2000
-Execution time(microseconds): 3.11723
-
-cores = 6
-Matrix size = 200
-Execution time(microseconds): 0.000881664
-Matrix size = 400
-Execution time(microseconds): 0.0122257
-Matrix size = 800
-Execution time(microseconds): 0.0875464
-Matrix size = 1200
-Execution time(microseconds): 0.538182
-Matrix size = 1600
-Execution time(microseconds): 1.29034
-Matrix size = 2000
-Execution time(microseconds): 2.53123
+| Размер задачи | 1 ядро | 2 ядра | 4 ядра | 6 ядер | 8 ядер |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **200** | 0.0907955 | 0.0562655 | 0.0258203 | 0.0167265 | 0.015443 |
+| **400** | 0.63104 | 0.338893 | 0.169563 | 0.11214 | 0.0909998 |
+| **800** | 4.33704 | 2.20004 | 1.16366 | 0.777759 | 0.618119 |
+| **1200** | 14.2763 | 7.32306 | 3.59985 | 2.73852 | 2.06893 |
+| **1600** | 36.2929 | 19.9557 | 9.62533 | 7.01743 | 5.26859 |
+| **2000** | 65.7445 | 35.5711 | 18.7623 | 12.9164 | 9.68307 |
 
 ## Вывод
 
-Параметры компиляции  mpic++ -O3 -o matmul main.cpp
-Параметры запуска  mprirun -n (cores) ./matmul
+Параметры компиляции  mpicxx -std=c++11 main.cpp -o main
+Параметры запуска  mpirun -r ssh./main 1000
 При увеличивании количества ядер скорость выполнения программы существенно возрастает
 Наибольшая разница наблюдается на матрицах больших размеров
+Программа запущена на суперкомпьютере Сергей Королев с помощью sbatch скрипта.
+Скриншоты папки на суперкомпьютере и нахождении задачи в очереди:
+
+<img src="screenshots/image (1).png">
+<img src="screenshots/image (2).png">
